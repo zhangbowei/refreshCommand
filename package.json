@@ -1,0 +1,24 @@
+{
+  "name": "updateallconf",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "bin" : "./bin/updateAllConf.js",
+  "dependencies": {
+    "shelljs": "^0.7.7",
+    "yargs": "^7.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/iStriver/updateallconf.git"
+  },
+  "author": "zhangbowei",
+  "license": "ISC",
+  "bin": {
+    "updateallconf": "updateAllConf.js"
+  },
+  "description": ""
+}
