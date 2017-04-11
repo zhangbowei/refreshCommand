@@ -1,6 +1,6 @@
 {
   "name": "updateallconf",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "main": "src/index.js",
   "dependencies": {
     "shelljs": "^0.7.7",
