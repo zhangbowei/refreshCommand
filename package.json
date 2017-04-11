@@ -1,8 +1,7 @@
 {
   "name": "updateallconf",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "main": "src/index.js",
-  "bin" : "./bin/updateAllConf.js",
   "dependencies": {
     "shelljs": "^0.7.7",
     "yargs": "^7.0.2"
@@ -18,7 +17,7 @@
   "author": "zhangbowei",
   "license": "ISC",
   "bin": {
-    "updateallconf": "updateAllConf.js"
+    "updateallconf": "./bin/updateAllConf.js"
   },
   "description": ""
 }

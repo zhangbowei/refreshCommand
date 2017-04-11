@@ -1,4 +1,4 @@
 const updateAllConf = require("./sketch");
 
-updateAllConf();
+// updateAllConf();
 module.exports = updateAllConf;

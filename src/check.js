@@ -13,7 +13,7 @@ function checkDate() {
     if ((nowDate - originDate) > delay) {
         wrapper.getRes(args)();
     } else {
-        wrapper.getRej(args)();
+        wrapper.getRej(args)('');
     }
 }
 

@@ -10,7 +10,7 @@ const runStep = function(iterator) {
 }
 
 const updateAllConf = function() {
-    return runStep(0)();
+    return runStep(0)().catch( (err) => console.log(err));
 }
 
 module.exports = updateAllConf;
