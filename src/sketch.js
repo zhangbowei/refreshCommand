@@ -1,11 +1,9 @@
-const checkDate = require("./check");
-const getScript = require("./list");
+const checkCommand = require("./check");
 const executeCommand = require("./execute");
-const markDate = require("./mark");
 
-const stepArr = [checkDate, markDate, getScript, executeCommand];
+const stepArr = [checkCommand, executeCommand];
 const runStep = function(iterator) {
-    if (iterator === stepArr.length) return;
+    if (iterator === stepArr.length) iterator = 1;
     return (data) => stepArr[iterator](data).then(runStep(++iterator));
 }
 

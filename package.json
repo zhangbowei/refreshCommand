@@ -1,6 +1,6 @@
 {
-  "name": "updateallconf",
-  "version": "1.2.0",
+  "name": "refreshcommand",
+  "version": "0.1.1",
   "main": "src/index.js",
   "dependencies": {
     "shelljs": "^0.7.7",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhangbowei/updateAllConf.git"
+    "url": "https://github.com/zhangbowei/refreshCommand.git"
   },
   "author": "zhangbowei",
   "license": "ISC",
   "bin": {
-    "updateallconf": "./bin/updateAllConf.js"
+    "refreshCommand": "./bin/refreshCommand.js"
   },
   "description": ""
 }

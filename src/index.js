@@ -1,4 +1,4 @@
-const updateAllConf = require("./sketch");
+const refreshCommand = require("./sketch");
 
-// updateAllConf();
-module.exports = updateAllConf;
+// refreshCommand();
+module.exports = refreshCommand;

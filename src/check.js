@@ -1,20 +1,19 @@
 const argv = require('yargs').argv;
 const shell = require("shelljs");
 const wrapper = require("./wrapper");
-const record = require("./record");
 
 
-function checkDate() {
+function checkCommand() {
     const args = arguments;
-    const nowDate = Date.now();
-    const delay = argv.delay ? argv.delay : 1000 * 60 * 60 * 24;
-    const originDate = record.readFile(record.datePath);
+    const command = argv.command ? argv.command : null;
 
-    if ((nowDate - originDate) > delay) {
-        wrapper.getRes(args)();
+    if (command !== null) {
+        console.log("command pass");
+        wrapper.getRes(args)(command);
     } else {
+        console.log("command no pass");
         wrapper.getRej(args)('');
     }
 }
 
-module.exports = wrapper.setPromise(checkDate);
+module.exports = wrapper.setPromise(checkCommand);

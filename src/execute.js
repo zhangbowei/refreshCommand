@@ -1,28 +1,15 @@
-const shell = require("shelljs");
-const record = require("./record");
 const wrapper = require("./wrapper");
 
 function executeCommand() {
-    function process(item) {
-        return item;
-    }
-
+    const shell = require("shelljs");
     const args = arguments;
-    const scriptArr = wrapper.getData(args);
-    const commandArr = scriptArr.reduce(function(prev, item) {
-        return item ? prev.concat([ process(item)]) : prev;
-    }, []);
+    const command = wrapper.getData(args);
 
-    if(commandArr.length === 0) wrapper.getRes(args)();
-
-    commandArr.forEach(function(item, index) {
-       shell.exec(item, function (err, stdout, stderr) {
+    console.log("Runnging");
+    shell.exec(command, function (err, stdout, stderr) {
         if (err) throw err;
-        if (index === commandArr.length - 1) {
-            wrapper.getRes(args)();
-        }
-        console.log([item.split(record.scriptLocation).join(''), "Finished"].join(' '));
-       });
+        wrapper.getRes(args)(command);
+        console.log("Finished");
     });
 
 }
